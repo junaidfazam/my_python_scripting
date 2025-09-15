@@ -12,25 +12,15 @@ engine = create_engine(
 )
 
 
-# # Mysql connection details
-# database_name = "my_spark_project"
-# url=f"jdbc:mysql://localhost:3306/{database_name}"
-# properties= {
-#     "user":"root",
-#     "password":"password",
-#     "driver":"com.mysql.cj.jdbc.Driver"
-#     }
-
-
-# database credential
+# fetching database credential from .evn
+## pip install python-dotenv is required if using .env
+# load_dotenv() # Load variables from .env
 # import os
 # db_username = os.getenv("MYSQL_USER")
 # db_password = os.getenv("MYSQL_PASSWORD")
 # host = os.getenv("MYSQL_HOST", "localhost")
 # port = os.getenv("MYSQL_PORT", "3306")
 # database = os.getenv("MYSQL_DB")
-
-# Using pymysql driver
+#
 # engine = create_engine(
-#     f"mysql+pymysql://{db_user}:{db_pass}@{host}:{port}/{database}"
-# )
+#     f"mysql+pymysql://{db_user}:{db_pass}@{host}:{port}/{database}")
